@@ -1498,7 +1498,8 @@ div:not(.CodeMirror-activeline)
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
 	line-height: 1.7;
 	font-family: var(--font-family-major);
-	text-align: justify;
+	/* NOTE: disabling temporarily to diagnose list alignment */
+	/* text-align: justify; */
 }
 
 pre.HyperMD-list-line.HyperMD-list-line {
@@ -1918,22 +1919,6 @@ tbody > tr {
 .markdown-preview-view th:hover {
 	background-color: var(--table-hover-thead-color);
 }
-
-/*
-.popover {
-  background-color: var(--background-primary);
-  border: 1px solid var(--text-accent);
-  box-shadow: 1px 1px 1px 1px var(--text-accent);
-  border-radius: 0px;
-  padding: 15px 20px 10px 20px;
-  position: relative;
-  font-weight: 400;
-  text-align: justify;
-  -webkit-text-stroke: 0.0px;
-  /*-webkit-font-smoothing: none;*
-  color:var(--text-normal);
-  overflow-y: scroll;
-}*/
 
 .popover mark {
 	background-color: var(--text-highlight-bg);
@@ -5431,7 +5416,8 @@ img[alt$="inlR"] {
 }
 .cm-s-obsidian,
 .markdown-preview-view {
-	text-align: justify;
+	/* NOTE: disabling temporarily to diagnose list alignment */
+	/* text-align: justify; */
 	hyphens: auto;
 }
 
