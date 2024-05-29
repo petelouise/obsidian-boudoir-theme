@@ -5134,6 +5134,8 @@ img[alt$="inlR"] {
 	--text-normal: #37291a;
 	--text-muted: #37291a;
 	--text-faint: #37291a;
+	--text-input: #37291a;
+	--text-input-placeholder: #511e1e;
 	--accent-strong: #37291a;
 	--text-error: #f5a7a2;
 	--text-error-hover: #fefcf9;
@@ -5276,14 +5278,16 @@ img[alt$="inlR"] {
 	--text-accent-hover: #f93759;
 	--text-normal: #efe9d9;
 	--text-muted: #efe9d9;
-	--text-faint: #efe9d9;
+	--text-faint: #00ffe587;
 	--accent-strong: #efe9d9;
 	--text-em-color: #f93759;
 	--text-error: #f93759;
 	--text-error-hover: #f93759;
 	--text-highlight-bg: #f39ba0;
 	--text-selection: #e5c7a94a;
-	--text-on-accent: #ffffff;
+	--text-on-accent: #292929;
+	--text-input: #21ff00;
+	--text-input-placeholder: #292929;
 	--interactive-normal: #f39ba0;
 	--interactive-hover: #ffccbc;
 	--interactive-accent: #f39ba0;
@@ -5419,6 +5423,42 @@ img[alt$="inlR"] {
 	/* NOTE: disabling temporarily to diagnose list alignment */
 	/* text-align: justify; */
 	hyphens: auto;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--text-input-placeholder);
+}
+
+.search-input-container::before {
+	color: var(--text-input-placeholder);
+	background-color: var(--text-input-placeholder);
+}
+
+.search-input-clear-button,
+input[type="search"]::placeholder {
+	color: var(--text-input-placeholder);
+}
+
+button,
+select,
+select.dropdown {
+	color: var(--text-on-accent);
+}
+
+textarea,
+input,
+input.metadata-input-text,
+input[type="date"],
+input[type="datetime-local"],
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+	background: var(--background-modifier-form-field);
+	border: var(--input-border-width) solid var(--background-modifier-border);
+	color: var(--text-input);
 }
 
 /*
