@@ -1660,14 +1660,6 @@ ul > li:not(.task-list-item) {
 	transition: all 300ms ease-in-out;
 }
 
-.theme-dark ul > li:not(.task-list-item) {
-	border-left: 2px solid var(--list-ul-block-color);
-}
-
-.theme-light ul > li:not(.task-list-item) {
-	border-left: 2px solid var(--list-ul-block-color);
-}
-
 ul > li:not(.task-list-item):hover {
 	border-color: var(--list-ul-hover);
 }
