@@ -5489,6 +5489,12 @@ div.CodeMirror-activeline > .HyperMD-quote {
 .ͼ1 .cm-lineNumbers .cm-gutterElement {
 	color: var(--text-gutter);
 }
+
+/* Style ordered list numbers */
+.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+	font-weight: bold;
+}
+
 /*
 text-align 属性
 规定元素中的文本的水平对齐方式。
