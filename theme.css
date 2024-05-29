@@ -5130,6 +5130,7 @@ img[alt$="inlR"] {
 	--text-faint: #37291a;
 	--text-input: #37291a;
 	--text-input-placeholder: #511e1e;
+	--text-gutter: #16ebeb;
 	--accent-strong: #37291a;
 	--text-error: #f5a7a2;
 	--text-error-hover: #fefcf9;
@@ -5288,6 +5289,7 @@ img[alt$="inlR"] {
 	--text-on-accent: #292929;
 	--text-input: #21ff00;
 	--text-input-placeholder: #292929;
+	--text-gutter: #26d5b8;
 	--interactive-normal: #f39ba0;
 	--interactive-hover: #ffccbc;
 	--interactive-accent: #f39ba0;
@@ -5481,6 +5483,11 @@ input[type="number"] {
 div:not(.CodeMirror-activeline) > .HyperMD-quote,
 div.CodeMirror-activeline > .HyperMD-quote {
 	border-left: none;
+}
+
+/* Style gutter numbers */
+.ͼ1 .cm-lineNumbers .cm-gutterElement {
+	color: var(--text-gutter);
 }
 /*
 text-align 属性
