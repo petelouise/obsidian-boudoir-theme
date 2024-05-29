@@ -338,6 +338,7 @@ to get a right-side note block
 	--font-family-YAML: "Lucida Handwriting", "Dancing Script", "Hand of Sean",
 		"Angelina", cursive;
 	--font-monospace: "Consolas", "Monaco", "Source Code Pro", monospace;
+	--link-decoration-thickness: 2px;
 }
 
 .theme-dark {
@@ -4074,6 +4075,7 @@ g.stateGroup line {
 :root {
 	--mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
 	--mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+	--link-decoration-thickness: 2px;
 }
 
 /* Classes common for multiple diagrams */
@@ -5180,6 +5182,7 @@ img[alt$="inlR"] {
 	--list-ol-block-color: #f5a7a2;
 	--list-ol-number-color: #f5a7a2;
 	--list-ol-hover: #980000;
+	--link-decoration-thickness: 2px;
 	--stag1: #fd355a;
 	--stag2: #fd355a;
 	--stag3: #fd355a;
@@ -5232,6 +5235,11 @@ img[alt$="inlR"] {
 	--event-item-color8: #f39ba0;
 	--event-item-color9: #f39ba0c4;
 	--event-item-color10: #f39ba091;
+	--list-marker-color: #12dd4a;
+	--link-color: var(--text-normal);
+	--link-underline-color: #12dd4a;
+	--link-external-color: var(--text-normal);
+	--link-external-underline-color: #17f7f7;
 	/* I am too noob to touch this part
     --text-gray: #f5a7a2;
     --text-brown: #f5a7a2;
@@ -5325,6 +5333,14 @@ img[alt$="inlR"] {
 	--list-ol-block-color: #f39ba0;
 	--list-ol-number-color: #ffccbc;
 	--list-ol-hover: #ffebec;
+	--list-marker-color: var(--list-ol-block-color);
+	--link-color: var(--text-normal);
+	--link-underline-color: #9ff717;
+	--link-external-color: var(--text-normal);
+	--link-external-underline-color: #17f7f7;
+	--link-decoration-thickness: 2px;
+	--blockquote-border-thickness: 2px;
+	--blockquote-border-color: var(--list-ol-block-color);
 	--stag1: #f39ba0;
 	--stag2: #ffccbc;
 	--stag3: #ffebec;
@@ -5461,6 +5477,19 @@ input[type="number"] {
 	color: var(--text-input);
 }
 
+.cm-underline {
+	text-decoration-color: var(--link-underline-color);
+}
+
+.markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline {
+	text-decoration-color: var(--link-external-underline-color);
+}
+
+div:not(.CodeMirror-activeline) > .HyperMD-quote,
+div.CodeMirror-activeline > .HyperMD-quote {
+	border-left: none;
+}
 /*
 text-align 属性
 规定元素中的文本的水平对齐方式。
