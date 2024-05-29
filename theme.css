@@ -339,6 +339,7 @@ to get a right-side note block
 		"Angelina", cursive;
 	--font-monospace: "Consolas", "Monaco", "Source Code Pro", monospace;
 	--link-decoration-thickness: 2px;
+	--list-bullet-size: 0.4em;
 }
 
 .theme-dark {
