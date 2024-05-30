@@ -5496,25 +5496,24 @@ div.CodeMirror-activeline > .HyperMD-quote {
 	font-weight: bold;
 }
 
-/*
-text-align 属性
-规定元素中的文本的水平对齐方式。
-该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。
+:root {
+	--first-line-spacing: 0.65rem;
+	--line-spacing: 0.45rem;
+}
 
-Syntax: start | end | left | right | center | justify | match-parent
-语法： 开始|结束|左对齐|右对齐|居中对齐|两端对齐|匹配-父级
+/* add top padding to first line under header */
+.cm-s-obsidian
+	.cm-line.HyperMD-header
+	+ .cm-line:not(.HyperMD-header):not(:has(> br:only-child)) {
+	padding-top: var(--first-line-spacing);
+}
 
+/* add top padding to other lines */
+.markdown-source-view.mod-cm6 .cm-line {
+	position: relative;
+	padding: var(--line-spacing) 0 0 0;
+}
 
-hyphens 属性
-定义是否允许在一行文本中使用连字符实现更多的自动换行机会。
-
-Syntax: none | manual | auto
-语法：不打断单词|仅当换行符时换行|按建议换行
-
-
-以上内容参考自 https://developer.mozilla.org/zh-CN/docs/Web/CSS
-整理：蚕子 QQ：312815311
-*/
 .markdown-preview-view img,
 .markdown-preview-view video {
 	max-width: min(100%, 800px) !important;
