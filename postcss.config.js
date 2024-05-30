@@ -1,3 +1,3 @@
 module.exports = {
-	plugins: [require("postcss-merge-rules")],
+	plugins: [require("postcss-csso")],
 };
