@@ -9,290 +9,6 @@
 /*蓝色托帕石，适合Obsidian v0.12.2。[20210506] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
 /*Blue Topaz for Obsidian v0.12.2, [20210506] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
-/*
-===========================    TIPS   ===============================
-====================================================================
-===========主题中的一些特别样式 Special parts in this theme===========
-=====================================================================
-
-
-==========================
-=====标签 Special tags=====
-==========================
-#dailynote
-#weeklynote
-#important
-#重要
-#inprogress
-#进行中
-#complete
-#完成
-#questions
-#ideas
-
-==========================
-========图片 images========
-==========================
-用法
-
-在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
-xxx.jpg|left
-
--------------------
-可用变体：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-如：xxx.png|L
--------------------
-
-
-如果同时调整图片大小，需要把调整大小的数值放在最后
-xxx.png|right|200
-
-使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
-xxx.png|inlineL
-
--------------------
-可用变体：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-如：xxx.png|inlR
--------------------
-
-Usage
-
-Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
-For example,
-xxx.jpg|left
-
----------------------------
-The variants you can use：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-e.g. xxx.png|L
----------------------------
-
-You can also change the image size with the position. You should put the "|number" at the end.
-For example,
-xxx.png|right|200
-
-
-Use "inlineL" or "inlineR" to embed the image on the left or right.
-xxx.png|inlineL
-
------------------------------
-The variants you can use：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-e.g. xxx.png|inlL
------------------------------
-
-===========================
-=====笔记框 Note blocks=====
-===========================
-
-----------------------------------------------------------------------
----------------不同颜色背景 Colourful note backgrounds-----------------
-----------------------------------------------------------------------
-语法：```note-xxx-bg 或```note-xxx-background
----------------------------------------------
-
-```note-orange-bg
-正文text
-```
-
-```note-yellow-bg
-正文text
-```
-
-```note-green-bg
-正文text
-```
-
-```note-blue-bg
-正文text
-```
-
-```note-purple-bg
-正文text
-```
-
-```note-pink-bg
-正文text
-```
-
-```note-red-bg
-正文text
-```
-
-```note-gray-bg
-正文text
-```
-
-```note-brown-bg
-正文text
-```
------------------------------------------------------
-----------不同笔记颜色 Colourful note texts------------
------------------------------------------------------
-
-```note-orange
-正文text
-```
-
-```note-yellow
-正文text
-```
-
-```note-green
-正文text
-```
-
-```note-blue
-正文text
-```
-
-```note-purple
-正文text
-```
-
-```note-pink
-正文text
-```
-
-```note-red
-正文text
-```
-
-```note-gray
-正文text
-```
-
-```note-brown
-正文text
-```
-
------------------------------------------------------------
-------------记忆笔记框 Recall/cloze note blocks-------------
------------------------------------------------------------
-可鼠标点击显示笔记内容 To show text by clicking
------------------------------------------------------------
-
-```note-cloze
-正文text
-```
-
-
---------------------------------------------------------
-------------重要笔记框 important note blocks-------------
---------------------------------------------------------
-有笔记外框 Different block style
---------------------------------------------------------
-
-```note-imp
-正文text
-```
-
-=========================
-=======列表 list=========
-=========================
-Just show vertical line instead of border
-显示竖线，不显示框线
-
-Use the following code to create a css snippet and activate in Obsidian
-使用以下代码创建css snippet，在软件中启用
-
-
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  position: relative;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  content: '';
-  border-left: 2px solid var(--background-modifier-border);
-  position: absolute;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  left: -13px;
-  top: 0;
-  bottom: 0;
-}
-
-li > p:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul > li:not(.task-list-item) {
-  padding-left: 0px;
-  margin-bottom: 8px;
-  padding-right: 0px;
-  margin-block-start: 0.3em;
-  border-left: none !important;
-}
-
-ol {
-  padding-inline-start: 2.1em;
-  margin-left: 0px;
-  margin-bottom: -9px;
-}
-
-ol > li {
-  margin-left: 2px;
-  padding-left: 0px;
-  border-left: none !important;
-}
-
-
-=========================================
-================stickies=================
-=========================================
-thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord
-
-用法
-Usage
-
-用以下格式，可以得到不同的样式
-<p class="stickies"\> 你自己的文字 </p>
-<p class="stickies2"\> 你自己的文字 </p>
-<p class="to-recall"\> 你自己的文字 </p>
-
-Use the following formats, you can obtain some special styles.
-<p class="stickies"\> Your words </p>
-<p class="stickies2"\> Your words </p>
-<p class="to-recall"\> Your words </p>
-
-
-
-=============================
-==== <aside> </aside> =======
-=============================
-thanks to dcoales from obsidian member group on discord
-https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764
-
-Use
-<aside><h1> Your words </h1></aside>
-<aside><h2> Your words </h2></aside>
-
-to get a right-side note block
-
-
-*/
-
 :root {
 	--font-size-obsidian-titlebar: 0.75em;
 	--font-size-vault-name: 0.875em; /*左侧库名字体大小*/
@@ -434,23 +150,9 @@ to get a right-side note block
 	--h5-color: #ad9fff;
 	--h6-color: #ca8bee;
 
-	/*old*/
-	/*
-  --h1-color: #4ea0e2;
-  --h2-color: #35d13dd3;
-  --h3-color: #dfd111e1;
-  --h4-color: #f1a634d0;
-  --h5-color: #f15959d0;
-  --h6-color: #d06af0d0;
-  */
-
 	/*graph*/
 	--graph-text-color: #b5b5b5;
-	/*--graphtag: #d1d43eb2;
-  --graph-attach: #4ad43eb2;
-  --graph-circle: #99b4d8b2;
-  --graph-line: #646464;
-  --graph-unresolved: #db4e4eb2;*/
+
 	--graphtag: #88d842bb;
 	--graph-attach: #b2cfe0bb;
 	--graph-circle: #55a2d6bb;
@@ -857,42 +559,6 @@ to get a right-side note block
 	background-color: var(--theme-color) !important;
 }
 
-/*tag pane*/ /*
-.pane-list-item-ending-flair{
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-size: 12px;
-  background-color: var(--background-secondary-alt);
-  line-height: 12px;
-  border-radius: 3px;
-  padding: 2px 4px;
-}*/
-
-/* Tag pills in edit mode
-.CodeMirror-line span.cm-hashtag-begin {
-  background-color: var(--text-accent);
-  color: white;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding-left: 8px;
-  border-right: none;
-  display: inline-block;
-  text-decoration: none !important;
-}
-
-.CodeMirror-line span.cm-hashtag-end {
-  background-color: var(--text-accent);
-  color: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding-right: 8px;
-  border-left: none;
-  display: inline-block;
-  text-decoration: none !important;
-}
-*/
-
 /*=========================*/
 
 /*thanks to Klaas from Obsidian Members Group on discord*/
@@ -1060,28 +726,6 @@ input.search-input {
 	padding: 3px 3px 3px 3px;
 }
 
-/*后退前进符号*/
-/*
-.titlebar-button.mod-back svg {
-  display:none;
-}
-.titlebar-button.mod-back:before {
-  content:"<<prev";
-  font-size: 11px;
-  top:-2px;
-  position:relative;
-}
-.titlebar-button.mod-forward svg {
-  display:none;
-}
-.titlebar-button.mod-forward:before {
-  content:"next>>";
-  font-size: 11px;
-  top:-2px;
-  position:relative;
-}
-*/
-
 /*tag page button*/
 .nav-buttons-container > .nav-action-button,
 .nav-buttons-container > .nav-action-button.is-active {
@@ -1099,31 +743,6 @@ input.search-input {
 	margin-top: -1px;
 }
 
-/*添加其他文字*/
-/*
-.titlebar-text:after {
-  content: " ";
-  font-size: 10px;
-  text-align: center;
-  right:-1px;
-  color: var(--text-accent2);
-  position: relative;
-}
-.titlebar-text:before{
-  content: " ";
-  font-size: 11px;
-  text-align: center;
-  right:1px;
-  color: var(--text-accent);
-  position: relative;
-}
-
-.titlebar-button-container {
-  position: absolute;
-  height: 26px;
-  top: 0px;
-}
-*/
 .side-dock-ribbon-action {
 	padding: 7px 0 2px 0;
 }
@@ -1514,11 +1133,6 @@ li {
 	font-family: var(--font-family-list);
 }
 
-/*
-blockquote {
-  margin: 20px 0;
-}*/
-
 mjx-container[jax="CHTML"] {
 	text-align: left;
 	outline: none;
@@ -1560,49 +1174,13 @@ code:not([class*="language-"]) {
 	font-family: var(--text-family-inline-code) !important;
 }
 
-/*====================================*/
-/*Add vertical lines of embedded lists*/
-/*thanks to loikein and death_au from forum and icr1001 from GitHub*/
-
-/*.cm-hmd-list-indent .cm-tab,
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  position: relative;
-}*/
-
-.cm-hmd-list-indent .cm-tab::before/*,
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before*/ {
+.cm-hmd-list-indent .cm-tab::before {
 	content: "";
 	border-left: 2px solid var(--background-modifier-border);
 	position: absolute;
 	height: 100%;
 	margin-left: 3px;
 }
-
-/*
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  left: -13px;
-  top: 0;
-  bottom: 0;
-} */
-
-/*
-pre.HyperMD-list-line::before {
-  content: '';
-  border-left: 2px solid var(--background-modifier-border);
-  left: 7.5px;
-  top: 30px;
-  height: 50%;
-}
-*/
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	color: var(--text-accent);
@@ -1766,10 +1344,6 @@ strong {
 		#f0d040 100%
 	) !important;
 	/* adapted from Obsidianite*/
-
-	/*background-color: var(--background-secondary-alt);
-  border-radius: 3px;
-  padding: 0 3px;*/
 }
 
 .theme-light strong > em,
@@ -2031,12 +1605,6 @@ a.external-link {
 	color: #e7e7e7;
 }
 
-/*绑定页面
-body.is-hovering-clickable, body.is-hovering-clickable{
-cursor: pointer !important;
-}
-*/
-
 .markdown-preview-view .markdown-embed {
 	background-color: var(--embed-color);
 	border: 1px solid var(--embed-color);
@@ -2069,8 +1637,7 @@ cursor: pointer !important;
 	display: inline;
 	max-height: 100%;
 	max-width: 100%;
-	/*margin: 0px 0px -15px -10px;
-  padding: 20px 0px 0px 0px;*/
+
 	overflow: hidden;
 }
 
@@ -2390,24 +1957,6 @@ pre[class~="language-txt"]:before {
 	color: var(--text-normal);
 }
 
-/*-- wider folding zone--*/ /*
-.CodeMirror-foldgutter {
-  width: 1em;
-}*/
-
-/*=============== DIRTY WYSIWYM HEADERS by _ph =====================*/
-/*=============== replace H1-H6 markup in edit mode ================*/
-
-/* Header folder icon */ /*
-.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
-  padding-left: -10px;
-}
-
-.CodeMirror-sizer {
-  margin-left: 35px !important;
-}
-*/
-
 /*-- reduce left padding --*/
 .CodeMirror {
 	height: 100%;
@@ -2429,203 +1978,6 @@ div.CodeMirror-activeline
 	opacity: 1;
 }
 
-/*-- hide # markup--*/ /*
-.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
-.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
-.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
-.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
-.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
-.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
-  font-size: 0px;
-}
-
-/*-- display H1-h6 in gutter--
-.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before {
-  content: "H1";
-  font-size: 14px;
-  color: var(--h1-color);
-  left: -27px;
-  top: -13px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before {
-  content: "H2";
-  font-size: 13px;
-  color: var(--h2-color);
-  left: -27px;
-  top: -11px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before {
-  content: "H3";
-  font-size: 12px;
-  color: var(--h3-color);
-  left: -26px;
-  top: -10px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before {
-  content: "H4";
-  font-size: 11px;
-  color: var(--h4-color);
-  left:-25px;
-  top: -9px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before {
-  content: "H5";
-  font-size: 10px;
-  color: var(--h5-color);
-  left: -24px;
-  top: -7px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
-  content: "H6";
-  font-size: 9px;
-  color: var(--h6-color);
-  left: -23px;
-  top: -6px;
-  position: absolute;
-}
-
-/*-- is active line, hide H[1-6] in gutter --
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
-  font-size: 0px;
-}
-
-/*-- is active line, display # markup --
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1 {
-  font-size: var(--font-size-h1);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2 {
-  font-size: var(--font-size-h2);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3 {
-  font-size: var(--font-size-h3);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4 {
-  font-size: var(--font-size-h4);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5 {
-  font-size: var(--font-size-h5);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
-  font-size: var(--font-size-h6);
-  display: inline;
-}*/
-
-/* show H1-H6 prefix in preview*/
-/*
-.theme-light h1::before {
-  content: 'H1 ';
-  font-size: 14px;
-  padding: 0 1px 0 0;
-}
-
-.theme-light h2::before {
-  content: 'H2 ';
-  font-size: 13px;
-  padding: 0 2px 0 0;
-}
-
-.theme-light h3::before {
-  content: 'H3 ';
-  font-size: 12px;
-  padding: 0 3px 0 0;
-}
-
-.theme-light h4::before {
-  content: 'H4 ';
-  font-size: 11px;
-  padding: 0 4px 0 0;
-}
-
-.theme-light h5::before {
-  content: 'H5 ';
-  font-size: 10px;
-  padding: 0 5px 0 0;
-}
-
-.theme-light h6::before {
-  content: 'H6 ';
-  font-size: 9px;
-  padding: 0 6px 0 0;
-}
-*/
-
-/*=============== FOCUS MODE by death_au + transparency mod ================*/
-/*
-.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-link,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-internal-link,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-url,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-escape-backslash,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-inline-code,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line.HyperMD-codeblock,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-builtin,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-footref,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line pre.HyperMD-footnote span.cm-hmd-footnote,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-list,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-quote,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-math,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.hmd-fold-math-placeholder {
-  opacity:0.8;
-  filter: saturate(0.8);
-}
-*/
-
-/*focus模式，高亮取消*/
-/*
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight {
-  background-color: transparent;
-}
-.CodeMirror-activeline {
-  opacity:1;
-}
-*/
-
-/* inline formatting, link targets and [[ ]] disappears if not active line
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-string.cm-url,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link:not(.cm-hmd-footnote):not(.cm-footref) {
-  display: none;
-}
-
-/* hide all html tags -- IT IS COMMENTED OUT BY DEFAULT
-/* div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-tag {
-  display: none;
-} */
-
-/* except list markers span.cm-formatting-list,
-/*code block backticks  span.cm-formatting-code-block.cm-hmd-codeblock,
-/* optionally header hashes  span.cm-formatting-header {
-  display: inline !important;
-}
-
-/* and task checkboxes
-span.cm-formatting-task {
-  display: inline !important;
-  font-family: monospace;
-}
-*/
-
 /* images : reduce displayed size of embedded files, zoom on hover */
 .markdown-preview-view img,
 .markdown-preview-view video {
@@ -2634,17 +1986,6 @@ span.cm-formatting-task {
 	margin-right: auto;
 	outline: 0px solid var(--text-accent);
 }
-
-/*
-.markdown-preview-view img:hover,
-.markdown-preview-view video:hover {
-  width: 100%;
-  height: 100%;
-  max-width: min(100%, 80vw);
-  max-height: min(100%, 80vh);
-  cursor: zoom-in;
-}
-*/
 
 /* Image zoom  */
 .view-content img:not([class="emoji"]) {
@@ -2667,13 +2008,6 @@ span.cm-formatting-task {
 	z-index: 200;
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
-
-/*file explorer columns view : slightly buggy ----*/
-/*.nav-folder-children {
-  column-width:150px;
-  column-rule: 1px solid var(--text-accent);
-}
-*/
 
 /* file explorer :Wrap long nav text and some paddings */
 .nav-file-title,
@@ -3098,13 +2432,6 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 	opacity: 1;
 }
 
-/*
-/*horizontal line in preview mode
-.markdown-preview-view hr{
-  border-top: 2px solid var(--theme-color);
-}
-*/
-
 /*Horizontal line in edit mode. Changes --- to full-width line*/
 /*thanks to Piotr from obsidian forum*/
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
@@ -3135,32 +2462,9 @@ div.CodeMirror-activeline > .HyperMD-quote {
 	border-left: 7px solid var(--theme-color);
 }
 
-/* thanks to Klaas from Discord */ /*
-div:not(.CodeMirror-activeline) > .HyperMD-quote {
-  background-color: var(--background-primary-alt);
-}
-
-div > .HyperMD-quote:active {
-  background-color: transparent;
-}*/
-
 .cm-quote:not([class*="link"]):not([class*="string"]) {
 	color: var(--text-normal);
 }
-
-/***************************************/
-/* Hide right side bar */
-/***************************************/
-/*
-.workspace-ribbon.mod-right:not(:hover) {
-  width: 9px;
-  transition: all 300ms ease-in-out;
-}
-
-.workspace-split.mod-right-split {
-  margin-right: 9px;
-}
-*/
 
 /*change collapse icon position in left side*/
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
@@ -3405,8 +2709,6 @@ pre.language-note-cloze::before {
 .node polygon:not([style*="fill"]):not([style*="stroke"]),
 .node path:not([style*="fill"]):not([style*="stroke"]) {
 	fill: var(--background-modifier-border) !important;
-	/*stroke: var(--text-normal) !important;
-  stroke-width: 0.5px !important; */
 }
 
 .node .label {
@@ -3647,11 +2949,6 @@ text.actor > tspan {
 .task {
 	stroke-width: 0.5px !important;
 }
-
-/*.taskText {
-  text-anchor: middle !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
-}*/
 
 .taskText:not([font-size]) {
 	font-size: 9px !important;
@@ -4110,16 +3407,6 @@ g.stateGroup line {
 	stroke: var(--text-muted) !important;
 }
 
-/*rect.task {
-  fill: var(--text-accent-hover);
-  fill-opacity: 1;
-  stroke: var(--text-normal);
-}
-
-g rect{
-  fill: var(--text-highlight-bg);
-}*/
-
 g text {
 	fill: var(--text-muted) !important;
 }
@@ -4325,17 +3612,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 	background-color: var(--calendar-week-hover) !important;
 }
 
-/*星期数表头*/ /*不完善，等插件更新*/ /*
-#calendar-container th:not(.svelte-1lgyrog):first-child {
-  background-color: var(--green) !important;
-}
-*/
-
-/*隐藏scrollbar*/
-/*div.view-content::-webkit-scrollbar {
-  display: none !important;
-}*/
-
 /*===========================*/
 /*copy button for code blocks*/
 /*===========================*/
@@ -4473,566 +3749,6 @@ pre.frontmatter.language-yaml:before {
 
 .event_item_color10 {
 	background-color: var(--event-item-color10) !important;
-}
-
-/* =========================================*/
-/* =========tapes pins and stickies=========*/
-/* =========================================*/
-/* thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord */
-
-/*not word now*/
-/*
-img[src$="#tape"]::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 30px;
-  position: relative;
-  top: 10px;
-  margin: auto;
-  background-color: var(--tape-color); /*here you can chosse the scotch tape background
-  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  z-index: 10;
-  clip-path: polygon(50% 0%, 100% 0%,
-  98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
-  0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);
-}
-
-img[src$="#tape"] {
-  float: right; /*here you can choose if image will float to the right or left
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(2deg);
-  width: 400px; /*you can change the image max width here
-}
-
-img[src$="#tape"]:active {
-  transform: scale(2);
-  overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  float: none;
-  z-index: 100;
-  padding: 30px;
-}
-
-/* Push Pin
-div[src$="#pin"] {
-  position: relative;
-  float: right;
-  width: 400px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  margin: auto;
-  z-index: 100;
-}
-
-div[src$="#pin"]::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #49aa66;
-  top: -3%;
-  left: 50%;
-  border: solid #0e5a3696 8px;
-  border-radius: 50%;
-  box-shadow: #265c2d -3px 3px 1px;
-}
-
-div[src$="#pin"]:active {
-  transform: scale(2);
-  overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  float: none;
-  z-index: 100;
-  padding: 20px;
-}
-
-
-div[alt="-sbq"] {
-  position: relative;
-  right: -5px;
-  float: right;
-  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
-  width: 30%;
-  background: #edec92;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(2deg);
-  transition: all 1s ease;
-  z-index: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-div[alt="-sbq"]::after {
-  content: "";
-  display: block;
-  height: 32px;
-  width: 2px;
-  position: absolute;
-  left: 50%;
-  top: -10px;
-  z-index: 1;
-  border-radius: 50%;
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  border: 1px;
-  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
-}
-
-
-div[alt="-sbq"]:hover {
-  border-bottom-left-radius: 225px 15px;
-  border-bottom-right-radius: 15px 255px;
-  border-top-left-radius: 15px 225px;
-  border-top-right-radius: 255px 15px;
-  box-shadow: 5px 5px rgba(0,0,0,.25);
-  }
-
-div[alt="-sbq"]:active {
-  transform: scale(1.5);
-  z-index: 100;
-}
-
-div[alt="-sbq"] div.markdown-embed-link {
-  visibility: hidden;
-}
-
-div[alt="-sbq"] div.markdown-embed {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-div[alt="-sbq"] .markdown-preview-view {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  overflow: hidden;
-}
-div[alt="-sbq"] .markdown-preview-view p {
-  letter-spacing: -1px;
-  word-wrap: break-word;
-  font-size: 18px;
-  font-family: Input Sans;
-  text-align: left;
-  line-height: 1;
-  color: black;
-}
-
-*/
-
-.stickies {
-	text-align: center;
-	transition: width 2s;
-	padding: 5px;
-	margin: 18px;
-	position: relative;
-	float: right;
-	right: -10px;
-	width: 30%;
-	background-color: var(--stickies-color-1);
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(2deg);
-	transition: all 2s ease;
-	z-index: 1;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 0px;
-	color: black;
-}
-
-.stickies::after {
-	content: "";
-	left: -5%;
-	top: -10px;
-	height: 40px;
-	width: 15px;
-	border-radius: 10px;
-	border: 3px solid #979797;
-	display: inline-block;
-	position: absolute;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(-11deg);
-	z-index: 11;
-}
-
-.stickies::before {
-	width: 11px;
-	height: 20px;
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: -3.5%;
-	top: -2px;
-	border-radius: 10px;
-	border: 3px solid #979797;
-	border-bottom: 0;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	z-index: 10;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(-11deg);
-}
-
-.stickies2 {
-	position: relative;
-	float: left;
-	box-shadow: 0 10px 10px 2px #9191912d;
-	width: 30%;
-	background-color: var(--stickies-color-2);
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(-2deg);
-	transition: all 2s ease;
-	z-index: 1;
-	padding: 20px;
-	margin: 10px;
-	color: black;
-}
-
-.stickies2::after {
-	content: "";
-	display: block;
-	height: 32px;
-	width: 2px;
-	position: absolute;
-	left: 50%;
-	top: -10px;
-	z-index: 1;
-	border-radius: 50%;
-	display: inline-block;
-	height: 15px;
-	width: 15px;
-	border: 1px;
-	box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
-}
-
-.to-recall {
-	position: relative;
-	float: left;
-	width: 30%;
-	background-color: var(--text-normal);
-	border-radius: 2%;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(0deg);
-	z-index: 1;
-	padding: 10px 8px;
-	margin-right: 8px;
-	font-weight: bold;
-	font-family: Cooper;
-	color: var(--text-normal);
-}
-
-.to-recall:hover {
-	cursor: pointer;
-}
-
-.to-recall:active {
-	position: relative;
-	max-width: 30%;
-	background-color: transparent;
-	border-radius: 5%;
-	transition: all 300ms ease;
-	color: var(--text-normal);
-}
-
-.to-recall::after {
-	content: "Click";
-	position: absolute;
-	font-size: 12px;
-	top: 1px;
-	right: 5px;
-	font-weight: 600;
-	font-family: Arial;
-	color: var(--background-primary);
-}
-
-.to-recall::before {
-	content: " To Recall";
-	display: inline-block;
-	position: absolute;
-	top: -20px;
-	left: -8px;
-	border-radius: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	font-family: OCR A;
-	color: #858585;
-	white-space: pre;
-}
-
-/* Image Flags Snippet by Lithou
-http://github.com/lithou/sandbox */
-
-/*not work now*/
-/*
-div {
-  --coremarg: 1%;
-  --extramarg: 1%; /* This margin is used for any added margin between items
-  --defaultwidth: 60%; /*This is the default width for core flags such as the "side" and "tape"
-}
-
-
-
-/* Core Flags
-  /*side
-      div[alt*="+side"]{
-          position: relative;
-          width: var(--defaultwidth);
-          float: right;
-          margin: 0px;
-          margin-left: var(--coremarg);
-      }
-
-  /*tape
-      div[alt*="+tape"] {
-          position: relative;
-          float: right;
-          width: var(--defaultwidth);
-          margin-left: var(--coremarg);
-          -webkit-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-          transform: rotate(2deg);
-      }
-
-      div[alt*="+tape"]::before {
-          content: "";
-          display: block;
-          position: relative;
-          margin: auto;
-          width: 100px;
-          height: 30px;
-          top: 12px;
-          background: rgba(255, 234, 118, 0.377); /*here you can chosse the scotch tape background
-          -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-          -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-          box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-          z-index: 10;
-          clip-path: polygon(50% 0%, 100% 0%,
-          98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
-          0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);
-      }
-      div[alt*="-lg"]::before{
-          width: 100px;
-          height: 30px;
-      }
-
-      div[alt*="-med"]::before{
-          width: 70px;
-          height: 25px;
-      }
-
-      div[alt*="-sm"]::before{
-          width: 45px;
-          height: 15px;
-          top: 8px;
-      }
-      div[alt*="-thumb"]::before{
-          width: 25px;
-          height: 5px;
-          top: 2px;
-      }
-  /* Push Pin
-      div[alt*="+pin"] {
-          position: relative;
-          float: right;
-          width: var(--defaultwidth);
-          margin: auto;
-          margin-left: var(--coremarg);
-          -webkit-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-          transform: rotate(2deg);}
-      div[alt*="+pin"]::before {
-          content: "";
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          background-color: #4588cc;
-          top: -3%;
-          left: 50%;
-          border: solid #336699 8px;
-          border-radius: 50%;
-          box-shadow: #274d74 -5px 3px 1px;}
-  /* Portrait and Landscape
-      div[alt*="+portrait"]{
-          position: relative;
-          width: calc(var(--defaultwidth)/2);
-          float: right;
-          /* background-color:blue; This setting will create a border effect of set color
-          clip-path: ellipse(36% 46% at 50% 50%);}
-      div[alt*="+portrait"]>img{
-          vertical-align: middle;
-          clip-path: ellipse(35% 45% at 50% 50%);}
-      div[alt*="+landscape"]{
-          position: relative;
-          width: var(--defaultwidth);
-          float: right;
-          /* background-color:blue; This setting will create a border effect of set color
-          clip-path: ellipse(46% 36% at 50% 50%);}
-      div[alt*="+landscape"]>img{
-          vertical-align: middle;
-          clip-path: ellipse(45% 35% at 50% 50%);}
-
-  /* Banner and HR
-      div[alt*="+banner"]{
-          height: 100px;
-          overflow: hidden;
-
-      }
-
-      div[alt*="+banner"]>img{
-          margin-top: -130px;
-          }
-
-      div[alt*="+hr"]{
-          height: 10px;
-          overflow: hidden;
-          border-radius: 20px;
-
-      }
-
-      div[alt*="+hr"]>img{
-          margin-top: -200px;
-          }
-
-
-  /*Custom Core Flags
-  div[alt*="+custom1"]{
-      position: relative;
-      width: var(--defaultwidth);
-      float: right;
-      margin-top: 0px;
-      margin-bottom: 0px;
-  }
-  div[alt*="+custom2"]{
-      position: relative;
-      width: var(--defaultwidth);
-      float: right;
-      margin-top: 0px;
-      margin-bottom: 0px;
-  }
-
-
-
-
-/* Modifier Flags
-  /* Orientation and position
-      div[alt*="-left"]{
-          float: left;
-          margin: 0px;
-          margin-right: var(--extramarg);}
-      div[alt*="-right"]{
-          float: right;
-          margin: 0px;
-          margin-left: var(--extramarg);}
-      div[alt*="-fix"]{position: fixed;}
-      div[alt*="-abs"]{position: absolute;}
-
-  /* Size
-      div[alt*="-thumb"]{width: 11.50%;}
-      div[alt*="-sm"]{width: 24%;}
-      div[alt*="-med"]{width: 32.3333%;}
-      div[alt*="-lg"]{width: 49%;}
-      div[alt*="-huge"]{width: 67%;}
-      div[alt*="-cwidth"]{float: none;margin-left: -10%;width: 120%;}
-
-/* Borders
-div[alt*="-border1"]>img{border: solid black 3px;}
-div[alt*="-border2"]>img{border: solid white 3px;}
-div[alt*="-bradius1"]>img{border-radius: 5px;}
-div[alt*="-bradius2"]>img{border-radius: 20px;}
-div[alt*="-bradiustl"]>img{border-top-left-radius: 20px;}
-div[alt*="-bradiusbr"]>img{border-bottom-right-radius: 20px;}
-div[alt*="-bradiustr"]>img{border-top-right-radius: 20px;}
-div[alt*="-bradiusbl"]>img{border-bottom-left-radius: 20px;}
-div[alt*="-bthick"]>img{border-width: 5px;}
-div[alt*="-bthin"]>img{border-width: 1px;}
-
-/* Div Borders
-div[alt*="-divborder1"]{border: solid #336699 2px;}
-div[alt*="-divborder2"]{border: solid black 2px;}
-div[alt*="-divbradius1"]{border-radius: 5px;}
-div[alt*="-divbradius2"]{border-radius: 20px;}
-div[alt*="-cdivbradius1"]{border-radius: 50px;}
-
-
-div[alt*="-shadow1"] > img{
-  box-shadow: darkgrey -2px 2px 2px;
-}
-
-
-div[alt*="-glow"] > img{
-  box-shadow: darkgrey 0px 0px 20px;
-}
-
-div[alt*="-nofloat"] {
-  float:none
-}
-*/
-
-/* thanks to dcoales from obsidian member group on discord */
-/* https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764 */
-aside {
-	float: right;
-	position: relative;
-	color: brown;
-	left: 5px;
-}
-
-aside > h1,
-aside > h2 {
-	font-weight: normal !important;
-	font-size: 16px !important;
-	border: 1px solid;
-	border-bottom: 1px solid !important;
-	border-radius: 3%;
-	background-color: transparent;
-	padding: 0px 5px 0px 5px;
-	width: 130px;
-	color: #467cf0 !important;
-	position: absolute;
-	left: -5px;
-	margin-left: 20%;
-}
-
-aside > h2 {
-	left: 130px;
-	color: #dd9207 !important;
-}
-
-.is-readable-line-width.sidecomments .markdown-preview-sizer {
-	margin-left: 20px !important;
 }
 
 /* for pdf */
@@ -5234,26 +3950,7 @@ img[alt$="inlR"] {
 	--link-underline-color: #12dd4a;
 	--link-external-color: var(--text-normal);
 	--link-external-underline-color: #17f7f7;
-	/* I am too noob to touch this part
-    --text-gray: #f5a7a2;
-    --text-brown: #f5a7a2;
-    --text-orange: #f5a7a2;
-    --text-yellow: #f5a7a2;
-    --text-green: #f5a7a2;
-    --text-blue: #f5a7a2;
-    --text-purple: #f5a7a2;
-    --text-pink: #f5a7a2;
-    --text-red: #f5a7a2;
-    --background-gray: #ffdece;
-    --background-brown: #ffdece;
-    --background-orange: #ffdece;
-    --background-yellow: #ffdece;
-    --background-green: #ffdece;
-    --background-blue: #ffdece;
-    --background-purple: #ffdece;
-    --background-pink: #ffdece;
-    --background-red: #ffdece;
-    */
+
 	--note-important: #fd355a;
 	--note-cloze: #fd355a;
 	--stickies-color-1: #fd355a;
@@ -5388,26 +4085,6 @@ img[alt$="inlR"] {
 	--event-item-color3: #ffd4bc;
 	--event-item-color2: #ffdcbc;
 	--event-item-color1: #ffe4bc;
-	/* I am too noob to touch this part
-    --text-gray: #acacac;
-    --text-brown: #be9684;
-    --text-orange: #ffa344;
-    --text-yellow: #ffdc51;
-    --text-green: #52c7b2;
-    --text-blue: #8ca1ff;
-    --text-purple: #b386f1;
-    --text-pink: #ff6bba;
-    --text-red: #ff4f4f;
-    --background-gray: #535353;
-    --background-brown: #493a3a;
-    --background-orange: #53422f;
-    --background-yellow: #585536;
-    --background-green: #32503e;
-    --background-blue: #2f5264;
-    --background-purple: #443f57;
-    --background-pink: #533b4a;
-    --background-red: #683c3c;
-    */
 	--note-important: #f93759;
 	--note-cloze: #f93759;
 	--stickies-color-1: #f39ba0;
