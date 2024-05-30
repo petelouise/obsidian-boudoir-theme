@@ -1,7 +1,14 @@
 {
     "name": "sample-obsidian-theme",
     "version": "1.0.0",
-	"scripts": {
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
-	}
+    "scripts": {
+        "version": "node version-bump.mjs && git add manifest.json versions.json"
+    },
+    "devDependencies": {
+        "postcss": "^8.4.38",
+        "stylelint": "^16.6.1",
+        "stylelint-config-clean-order": "^5.4.2",
+        "stylelint-config-recommended": "^14.0.0",
+        "stylelint-order": "^6.0.4"
+    }
 }
