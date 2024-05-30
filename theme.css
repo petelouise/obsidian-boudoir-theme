@@ -635,11 +635,8 @@ mark {
 }
 
 /*标题后阴影*/
-.view-header-title-container:after {
-	display: none;
-}
 /*标题前阴影*/
-.view-header-title-container::before {
+.view-header-title-container:after,.view-header-title-container::before {
 	display: none;
 }
 
@@ -840,22 +837,12 @@ body {
 	background-color: transparent;
 }
 
-.tag-container .tree-item-self.tag-pane-tag.is-clickable:hover {
+.tag-container .tree-item-self.tag-pane-tag.is-clickable:hover,.outline .tree-item-self.is-clickable:hover {
 	color: var(--text-normal);
 	background-color: var(--theme-color-translucent-1);
 }
 
-.outline .tree-item-self.is-clickable:hover {
-	color: var(--text-normal);
-	background-color: var(--theme-color-translucent-1);
-}
-
-.backlink-pane > .tree-item-self.is-clickable:hover {
-	color: var(--text-normal);
-	background-color: var(--background-secondary-alt);
-}
-
-.search-result-file-match:hover {
+.backlink-pane > .tree-item-self.is-clickable:hover,.search-result-file-match:hover {
 	color: var(--text-normal);
 	background-color: var(--background-secondary-alt);
 }
@@ -993,23 +980,23 @@ div:not(.CodeMirror-activeline)
 }
 
 .markdown-preview-view h1 {
-	padding-bottom: 1px;
 
 	font-family: var(--font-family-h1);
 	font-size: var(--font-size-h1);
-	font-weight: 600;
-	line-height: 1.3;
 
 	border-bottom: 2px solid var(--h1-color);
 }
 
-.markdown-preview-view h2 {
+.markdown-preview-view h1,.markdown-preview-view h2 {
 	padding-bottom: 1px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.markdown-preview-view h2 {
 
 	font-family: var(--font-family-h2);
 	font-size: var(--font-size-h2);
-	font-weight: 600;
-	line-height: 1.3;
 
 	border-bottom: 1px solid var(--h2-color);
 }
@@ -1055,40 +1042,40 @@ div:not(.CodeMirror-activeline)
 }
 
 .cm-header-1 {
-	position: relative;
 	font-family: var(--font-family-h1);
 	font-size: var(--font-size-h1);
+}
+.cm-header-1,.cm-header-2 {
+	position: relative;
 	font-weight: 600;
 }
 .cm-header-2 {
-	position: relative;
 	font-family: var(--font-family-h2);
 	font-size: var(--font-size-h2);
-	font-weight: 600;
 }
 .cm-header-3 {
-	position: relative;
 	font-family: var(--font-family-h3);
 	font-size: var(--font-size-h3);
+}
+.cm-header-3,.cm-header-4 {
+	position: relative;
 	font-weight: 600;
 }
 .cm-header-4 {
-	position: relative;
 	font-family: var(--font-family-h4);
 	font-size: var(--font-size-h4);
-	font-weight: 600;
 }
 .cm-header-5 {
-	position: relative;
 	font-family: var(--font-family-h5);
 	font-size: var(--font-size-h5);
+}
+.cm-header-5,.cm-header-6 {
+	position: relative;
 	font-weight: 600;
 }
 .cm-header-6 {
-	position: relative;
 	font-family: var(--font-family-h6);
 	font-size: var(--font-size-h6);
-	font-weight: 600;
 }
 
 .cm-s-obsidian .cm-header,
@@ -1318,11 +1305,7 @@ ol > li {
 	transition: all 300ms ease-in-out;
 }
 
-.theme-dark ol > li {
-	border-left: 2px solid var(--list-ol-block-color);
-}
-
-.theme-light ol > li {
+.theme-dark ol > li,.theme-light ol > li {
 	border-left: 2px solid var(--list-ol-block-color);
 }
 
@@ -1404,15 +1387,7 @@ strong {
 	-webkit-text-fill-color: transparent;
 }
 
-span.cm-formatting.cm-formatting-strong.cm-strong {
-	opacity: 0.2;
-}
-
-span.cm-formatting.cm-formatting-em.cm-em {
-	opacity: 0.2;
-}
-
-span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+span.cm-formatting.cm-formatting-strong.cm-strong,span.cm-formatting.cm-formatting-em.cm-em,span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
 	opacity: 0.2;
 }
 
@@ -1443,20 +1418,10 @@ span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
 .theme-light
 	div.CodeMirror-activeline
 	.CodeMirror-line
-	span.cm-formatting.cm-formatting-strong.cm-strong {
-	color: var(--orange);
-	opacity: 1;
-}
-
-.theme-light
+	span.cm-formatting.cm-formatting-strong.cm-strong,.theme-light
 	div.CodeMirror-activeline
 	.CodeMirror-line
-	span.cm-formatting.cm-formatting-em.cm-em {
-	color: var(--orange);
-	opacity: 1;
-}
-
-.theme-light
+	span.cm-formatting.cm-formatting-em.cm-em,.theme-light
 	div.CodeMirror-activeline
 	.CodeMirror-line
 	span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
@@ -1651,10 +1616,6 @@ a.external-link {
 .theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
 	text-shadow: none;
-}
-
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"] {
 	color: #000000;
 }
 
@@ -1785,11 +1746,7 @@ pre[class*="language-"] {
 	color: var(--blue) !important;
 }
 
-.token.number {
-	color: var(--green) !important;
-}
-
-.token.string,
+.token.number,.token.string,
 .token.char,
 .token.attr-value,
 .token.builtin,
@@ -1859,11 +1816,10 @@ pre[class*="language-"] {
 
 pre.line-numbers {
 	counter-reset: linenumber !important;
-	position: relative !important;
 	padding-left: 3.8em !important;
 }
 
-pre.line-numbers > code {
+pre.line-numbers,pre.line-numbers > code {
 	position: relative !important;
 }
 
@@ -1911,14 +1867,15 @@ pre > code > span {
 }
 
 code.language-yaml.is-loaded {
-	word-break: break-word !important;
-	word-wrap: break-word !important;
 	white-space: pre-wrap !important;
 }
 
-code.language-md.is-loaded {
+code.language-yaml.is-loaded,code.language-md.is-loaded {
 	word-break: break-word !important;
 	word-wrap: break-word !important;
+}
+
+code.language-md.is-loaded {
 	white-space: break-spaces !important;
 }
 
@@ -1959,11 +1916,7 @@ pre[class~="language-css"]:before {
 	content: "CSS";
 }
 
-pre[class~="language-javascript"]:before {
-	content: "JS";
-}
-
-pre[class~="language-js"]:before {
+pre[class~="language-javascript"]:before,pre[class~="language-js"]:before {
 	content: "JS";
 }
 
@@ -2092,11 +2045,9 @@ div.CodeMirror-activeline
 
 /* file explorer : Indent wrapped nav text */
 .nav-file-title-content {
-	margin-left: 0px;
-	text-indent: 0px;
 	word-break: break-word;
 }
-.nav-file-title-content.is-being-renamed {
+.nav-file-title-content,.nav-file-title-content.is-being-renamed {
 	margin-left: 0px;
 	text-indent: 0px;
 }
@@ -2928,18 +2879,16 @@ text.actor > tspan {
 	fill: var(--background-primary) !important;
 }
 
-#sequencenumber {
+#sequencenumber,#crosshead path {
 	fill: var(--text-muted) !important;
 }
 
-#crosshead path {
-	fill: var(--text-muted) !important;
+#crosshead path,.messageText {
 	stroke: var(--text-muted) !important;
 }
 
 .messageText {
 	fill: var(--text-normal) !important;
-	stroke: var(--text-muted) !important;
 }
 
 .labelBox {
@@ -2948,12 +2897,7 @@ text.actor > tspan {
 }
 
 .labelText,
-.labelText > tspan {
-	fill: var(--text-muted) !important;
-	stroke: none !important;
-}
-
-.loopText,
+.labelText > tspan,.loopText,
 .loopText > tspan {
 	fill: var(--text-muted) !important;
 	stroke: none !important;
@@ -2979,17 +2923,7 @@ text.actor > tspan {
 
 /* Gantt chart variables */
 
-.activation0 {
-	fill: var(--background-secondary) !important;
-	stroke: var(--text-accent) !important;
-}
-
-.activation1 {
-	fill: var(--background-secondary) !important;
-	stroke: var(--text-accent) !important;
-}
-
-.activation2 {
+.activation0,.activation1,.activation2 {
 	fill: var(--background-secondary) !important;
 	stroke: var(--text-accent) !important;
 }
@@ -3016,22 +2950,10 @@ text.actor > tspan {
 .section1,
 .section3 {
 	opacity: 0.2 !important;
-	fill: var(--text-normal) !important;
 }
 
-.sectionTitle0 {
-	fill: var(--text-normal) !important;
-}
-
-.sectionTitle1 {
-	fill: var(--text-normal) !important;
-}
-
-.sectionTitle2 {
-	fill: var(--text-normal) !important;
-}
-
-.sectionTitle3 {
+.section1,
+.section3,.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3 {
 	fill: var(--text-normal) !important;
 }
 
@@ -3083,15 +3005,16 @@ text.actor > tspan {
 
 .taskTextOutsideRight {
 	font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
-	font-size: 9px !important;
 	text-anchor: start !important;
+}
+
+.taskTextOutsideRight,.taskTextOutsideLeft {
+	font-size: 9px !important;
 	fill: var(--text-normal) !important;
 }
 
 .taskTextOutsideLeft {
-	font-size: 9px !important;
 	text-anchor: end !important;
-	fill: var(--text-normal) !important;
 }
 
 /* Special case clickable */
@@ -3100,19 +3023,7 @@ text.actor > tspan {
 	cursor: pointer !important;
 }
 
-.taskText.clickable {
-	cursor: pointer !important;
-	font-weight: bold !important;
-	fill: var(--interactive-accent_hover) !important;
-}
-
-.taskTextOutsideLeft.clickable {
-	cursor: pointer !important;
-	font-weight: bold !important;
-	fill: var(--interactive-accent_hover) !important;
-}
-
-.taskTextOutsideRight.clickable {
+.taskText.clickable,.taskTextOutsideLeft.clickable,.taskTextOutsideRight.clickable {
 	cursor: pointer !important;
 	font-weight: bold !important;
 	fill: var(--interactive-accent_hover) !important;
@@ -3136,11 +3047,7 @@ text.actor > tspan {
 }
 
 .taskTextOutside0,
-.taskTextOutside2 {
-	fill: var(--text-muted) !important;
-}
-
-.taskTextOutside1,
+.taskTextOutside2,.taskTextOutside1,
 .taskTextOutside3 {
 	fill: var(--text-muted) !important;
 }
@@ -3220,14 +3127,10 @@ text.actor > tspan {
 .doneCritText0,
 .doneCritText1,
 .doneCritText2,
-.doneCritText3 {
-	fill: var(--text-normal) !important;
-}
-
-.activeCritText0,
+.doneCritText3,.activeCritText0,
 .activeCritText1,
 .activeCritText2,
-.activeCritText3 {
+.activeCritText3,.titleText {
 	fill: var(--text-normal) !important;
 }
 
@@ -3235,7 +3138,6 @@ text.actor > tspan {
 	font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 	font-size: 20px !important;
 	text-anchor: middle !important;
-	fill: var(--text-normal) !important;
 }
 
 g.classGroup text {
@@ -3254,11 +3156,13 @@ g.clickable {
 
 g.classGroup rect {
 	fill: var(--background-secondary-alt) !important;
+}
+
+g.classGroup rect,g.classGroup line {
 	stroke: var(--theme-color) !important;
 }
 
 g.classGroup line {
-	stroke: var(--theme-color) !important;
 	stroke-width: 1 !important;
 }
 
@@ -3284,49 +3188,19 @@ g.classGroup line {
 	stroke-dasharray: 3 !important;
 }
 
-#compositionStart {
+#compositionStart,#compositionEnd {
 	fill: var(--text-accent) !important;
 	stroke: var(--text-accent) !important;
 	stroke-width: 1 !important;
 }
 
-#compositionEnd {
-	fill: var(--text-accent) !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
-}
-
-#aggregationStart {
+#aggregationStart,#aggregationEnd {
 	fill: var(--background-secondary-alt) !important;
 	stroke: var(--text-accent) !important;
 	stroke-width: 1 !important;
 }
 
-#aggregationEnd {
-	fill: var(--background-secondary-alt) !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
-}
-
-#dependencyStart {
-	fill: var(--text-accent) !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
-}
-
-#dependencyEnd {
-	fill: var(--text-accent) !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
-}
-
-#extensionStart {
-	fill: var(--text-accent) !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
-}
-
-#extensionEnd {
+#dependencyStart,#dependencyEnd,#extensionStart,#extensionEnd {
 	fill: var(--text-accent) !important;
 	stroke: var(--text-accent) !important;
 	stroke-width: 1 !important;
@@ -3335,13 +3209,17 @@ g.classGroup line {
 .commit-id,
 .commit-msg,
 .branch-label {
-	font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
 	color: var(--text-muted) !important;
 	fill: var(--text-muted) !important;
 }
 
-.pieTitleText {
+.commit-id,
+.commit-msg,
+.branch-label,.pieTitleText {
 	font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.pieTitleText {
 	font-size: 18px !important;
 	text-anchor: middle !important;
 	fill: var(--text-normal) !important;
@@ -3353,12 +3231,9 @@ g.classGroup line {
 
 g.stateGroup text {
 	font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
-	font-size: 10px !important;
-	fill: var(--text-accent) !important;
-	stroke: none !important;
 }
 
-g.stateGroup text {
+g.stateGroup text,g.stateGroup text {
 	font-size: 10px !important;
 	fill: var(--text-accent) !important;
 	stroke: none !important;
@@ -3366,23 +3241,23 @@ g.stateGroup text {
 
 g.stateGroup .state-title {
 	font-weight: bolder !important;
+}
+
+g.stateGroup .state-title,g.stateGroup rect {
 	fill: var(--background-secondary-alt) !important;
 }
 
 g.stateGroup rect {
-	fill: var(--background-secondary-alt) !important;
 	stroke: var(--text-accent) !important;
 }
 
-g.stateGroup line {
+g.stateGroup line,.transition {
 	stroke: var(--text-accent) !important;
 	stroke-width: 1 !important;
 }
 
 .transition {
 	fill: none !important;
-	stroke: var(--text-accent) !important;
-	stroke-width: 1 !important;
 }
 
 .stateGroup .composit {
@@ -3535,11 +3410,7 @@ g.stateGroup line {
 	stroke: var(--text-muted) !important;
 }
 
-g text {
-	fill: var(--text-muted) !important;
-}
-
-#arrowhead,
+g text,#arrowhead,
 #sequencenumber,
 .cluster text,
 .label text,
@@ -3656,15 +3527,13 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 #calendar-container th {
 	padding: 6px 0;
 	background-color: var(--table-thead-background-color) !important;
-	border-radius: 0px !important;
-}
-
-#calendar-container .week-num,
-#calendar-container .day {
-	border-radius: 0px !important;
 }
 
 /*天*/
+#calendar-container th,#calendar-container .week-num,
+#calendar-container .day,#calendar-container td {
+	border-radius: 0px !important;
+}
 #calendar-container td {
 	width: 12.5%;
 	padding: 0px 0px 0px 0px !important;
@@ -3672,7 +3541,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 	line-height: 22px;
 
 	border-right: 2px solid var(--background-secondary-alt);
-	border-radius: 0px !important;
 }
 
 #calendar-container tr {
@@ -3722,13 +3590,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 }
 
 /*月份调整 month*/
-#calendar-container .month {
-	font-size: 20px;
-	line-height: 1;
-}
 
 /*年份调整 year*/
-#calendar-container .year {
+#calendar-container .month,#calendar-container .year {
 	font-size: 20px;
 	line-height: 1;
 }
@@ -3829,12 +3693,14 @@ pre.frontmatter.language-yaml:before {
 
 .ei_Title {
 	margin-left: -10px !important;
+}
+
+.ei_Title,.ei_Copy {
 	font-size: 15px !important;
 }
 
 .ei_Copy {
 	margin-left: 5px !important;
-	font-size: 15px !important;
 }
 
 .event_item {
@@ -3942,7 +3808,7 @@ img[alt$="inlR"] {
 /*===================================================*/
 /*===================================================*/
 
-.is-mobile .markdown-preview-view ol > li {
+.is-mobile .markdown-preview-view ol > li,.is-mobile .markdown-preview-view ul > li:not(.task-list-item) {
 	margin-top: 4px;
 	margin-bottom: 6px;
 	margin-left: -5px;
@@ -3954,16 +3820,9 @@ img[alt$="inlR"] {
 
 .is-mobile .markdown-preview-view ul > li:not(.task-list-item) {
 	width: fit-content;
-	margin-top: 4px;
-	margin-bottom: 6px;
-	margin-left: -5px;
-	padding-right: 6px;
-	padding-left: 6px;
 
 	word-break: break-word;
 	word-wrap: break-word;
-
-	border-radius: 5px;
 }
 /*The following codes belong to the Pink Topaz, which includes all the modifications. This modified theme was modified by Mouth On Cloud. Welcome to join our tencent QQ App's obsidian group chat: #774176839   */
 /*下面的是粉色托帕石的魔改部分，也是和原版蓝色托帕石的全部不同部分。[20210518] 嘴上云制作，欢迎到obsidian的qq群找俺一起折腾。群号：774176839  */
@@ -4364,11 +4223,7 @@ pre[class*="language-c"]:before {
 	content: "C";
 }
 
-pre[class*="language-py"]:before {
-	content: "Python";
-}
-
-pre[class*="language-python"]:before {
+pre[class*="language-py"]:before,pre[class*="language-python"]:before {
 	content: "Python";
 }
 
@@ -4380,11 +4235,7 @@ pre[class*="language-css"]:before {
 	content: "Css";
 }
 
-pre[class*="language-javascript"]:before {
-	content: "Js";
-}
-
-pre[class*="language-js"]:before {
+pre[class*="language-javascript"]:before,pre[class*="language-js"]:before {
 	content: "Js";
 }
 

@@ -6,6 +6,8 @@
     },
     "devDependencies": {
         "postcss": "^8.4.38",
+        "postcss-cli": "^11.0.0",
+        "postcss-merge-rules": "^7.0.0",
         "stylelint": "^16.6.1",
         "stylelint-config-clean-order": "^5.4.2",
         "stylelint-config-recommended": "^14.0.0",
