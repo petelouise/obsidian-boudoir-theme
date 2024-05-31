@@ -1916,6 +1916,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 .outline .tree-item-children:hover {
 	border-left-color: rgba(45, 135, 211, 0.5);
+	border-left-color: #f39ba0;
 }
 .markdown-preview-view
 	.list-collapse-indicator.collapse-indicator.collapse-icon {
@@ -3265,9 +3266,7 @@ img[alt$="inlineR"] {
 	text-align: start;
 	letter-spacing: var(--code-inline-letter-spacing);
 }
-.outline .tree-item-children:hover {
-	border-left-color: #f39ba0;
-}
+
 .cm-s-obsidian,
 .markdown-preview-view {
 	hyphens: auto;
