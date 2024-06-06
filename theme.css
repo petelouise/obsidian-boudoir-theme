@@ -8,12 +8,12 @@
 	--font-size-folder-and-file: 0.8125em;
 	--font-size-edit-normal: 1em;
 	--font-size-preview-normal: 1em;
-	--font-size-h1: 1.5625em;
-	--font-size-h2: 1.4375em;
-	--font-size-h3: 1.3125em;
-	--font-size-h4: 1.1875em;
-	--font-size-h5: 1.0625em;
-	--font-size-h6: 0.9375em;
+	--font-size-h1: 1.56em;
+	--font-size-h2: 1.48em;
+	--font-size-h3: 1.4em;
+	--font-size-h4: 1.32em;
+	--font-size-h5: 1.24em;
+	--font-size-h6: 1.16em;
 	--font-size-tag: 1em;
 	--font-size-list: 1em;
 	--font-size-preview-blockquote: 1em;
@@ -856,7 +856,9 @@ div:not(.CodeMirror-activeline)
 	position: relative;
 }
 .cm-header-2,
-.markdown-preview-view h2 {
+.markdown-preview-view h2,
+.HyperMD-header.HyperMD-header-2,
+.HyperMD-header .cm-header-2 {
 	font-family: var(--font-family-h2);
 	font-size: var(--font-size-h2);
 }
