@@ -353,6 +353,11 @@
 	--stickies-color-2: #e9c6f1;
 	--header-color: #0e64bb;
 }
+
+.workspace-sidedock-vault-profile {
+	display: none !important;
+}
+
 .tag[href^="#important"] {
 	font-family: var(--font-family-special-tag);
 	font-weight: 600;
