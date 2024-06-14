@@ -911,7 +911,7 @@ ul > li:not(.task-list-item):hover {
 }
 ol {
 	margin-left: 25px;
-	padding-inline-start: 1em;
+	padding-inline-start: 1rem;
 }
 ol ol {
 	list-style: lower-latin;
@@ -1384,7 +1384,7 @@ code.language-md.is-loaded {
 }
 pre:before {
 	position: absolute;
-	top: 0.2em;
+	top: 0.2rem;
 	right: 30px;
 
 	font-family: var(--default-font);
@@ -1513,7 +1513,7 @@ div.CodeMirror-activeline
 } */
 .cm-animate-fat-cursor,
 .cm-fat-cursor .CodeMirror-cursor {
-	width: 0.6em;
+	width: 0.6rem;
 	opacity: 0.6 !important;
 	background: #db9a1f;
 }
